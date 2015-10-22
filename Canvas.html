@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<body>
+    
+<canvas id="myCanvas1" width="200" height="100"
+style="border:2px solid #c3c3c3;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas1");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#00FFFF";
+ctx.fillRect(20,20,160,60);
+</script>
+
+<canvas id="myCanvas2" width="200" height="100"
+style="border:2px solid #c3c3c3;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas2");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+ctx.moveTo(200,0);
+ctx.lineTo(0,100);
+ctx.stroke();
+ctx.moveTo(100,0);
+ctx.lineTo(100,100);
+ctx.stroke();
+ctx.moveTo(0,50);
+ctx.lineTo(200,50);
+ctx.stroke();
+</script>
+    
+<canvas id="myCanvas3" width="200" height="100"
+style="border:2px solid #c3c3c3;">
+</canvas>
+
+<script>
+var canvas = document.getElementById("myCanvas3");
+var ctx = canvas.getContext("2d");
+var grd = ctx.createRadialGradient(100,50,40,100,50,30);
+grd.addColorStop(0,"green");
+grd.addColorStop(1,"yellow");
+ctx.fillStyle = grd;
+ctx.arc(100,50,40,0,2*Math.PI);
+ctx.fill();
+</script>
+    
+<canvas id="myCanvas4" width="200" height="100" 
+style="border:2px solid #c3c3c3;">
+</canvas>
+
+<script>
+var canvas=document.getElementById("myCanvas4");
+var ctx=canvas.getContext("2d");
+
+ctx.font="15px Georgia";
+ctx.fillText("Try something new !",25,40);
+ctx.font="25px Verdana";
+
+var gradient=ctx.createLinearGradient(0,0,200,0);
+gradient.addColorStop("0","magenta");
+gradient.addColorStop("0.5","blue");
+gradient.addColorStop("1.0","red");
+ctx.fillStyle=gradient;
+ctx.fillText("HTML Canvas",10,80);
+</script>
+
+    
+</body>
+</html>
