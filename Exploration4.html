@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>The course I will take next semester</h2> 
+<div id="div1"></div>
+<script>
+var myArray = [
+{
+"Course":"OBJECT ORIENTED DESIGN 1 ",
+"Teacher":"  Dale Musser",
+"url": "http://engineering.missouri.edu/person/musserd/"
+},
+{
+"Course": "SENIOR CAPSTONE DESIGN 2  ",
+"Teacher": "  Joseph  Guilliams",
+"url": "http://engineering.missouri.edu/person/guilliamsj/"
+},
+{
+"Course": "COMPUTER ARCHITECTURE 1 ",
+"Teacher": "  Yunxin Zhao",
+"url": "http://engineering.missouri.edu/person/zhaoy/"
+},
+{
+"Course": "THEORY OF COMPUTATION 1  ",
+"Teacher": "  Youssef Saab",
+"url": "http://engineering.missouri.edu/person/saaby/"
+}
+];
+
+myFunction(myArray);
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out +=arr[i].Course + '<a href="' + arr[i].url + '">' + 
+        arr[i].Teacher + '</a><br>';
+    }
+    document.getElementById("div1").innerHTML = out;
+}
+</script>
+
+</body>
+</html>
+
